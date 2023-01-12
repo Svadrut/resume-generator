@@ -14,7 +14,7 @@ export const resumeRotuer = createTRPCRouter({
         temperature: 0.7,
       });
       if (!response.data.choices) {
-        const error = new Error('Please try again later');
+        const error = new Error("Please try again later");
         throw error;
       } else {
         await prisma.resume.create({
